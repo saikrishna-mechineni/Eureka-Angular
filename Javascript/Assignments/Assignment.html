@@ -1,0 +1,143 @@
+<script>
+    //Program to reverse a string
+    let str1 = 'sachin'
+    console.log('Reverse of sachin is:',str1.split('').reverse().join(''));
+
+    //Program to reverse the words 
+    let str2 = 'This is a javascript program'
+    console.log("Reverse of the 'This is a javascript program' sentence is:",str2.split(' ').reverse().join(' '));
+
+    //Program to print the first non-repeative character in a string
+    let str3 = 'entertainment'
+
+    function firstNonRepeativeChar(s){
+        for(let i = 0; i < s.length; i++){
+            if(s.indexOf(s[i]) == s.lastIndexOf(s[i])){
+                return s[i];
+                break
+            }
+        }
+        return null
+    }
+    let result = firstNonRepeativeChar(str3)
+    console.log('The first non-repeative character in entertainment:',result)
+
+    //Program to print a string in title case
+    let str4 = 'this is javascript class';
+
+    function ToTitleCase(s){
+        let x = s.split(' ')
+        for(i =0; i<x.length; i++){
+            x[i] = x[i][0].toUpperCase()+x[i].slice(1);
+        }
+        return x.join(' ')
+    }
+    let result1 = ToTitleCase(str4);
+    console.log('The converted title case for this is javascript class is:',result1);
+
+    //Program to find longest word in a sentence
+    let str5 = 'this is javascript class'
+
+    function longLenth(s){
+        let x = s.split(' ')
+        let y = ''
+        
+            for(i= 0; i <x.length; i++){
+                if (x[i].length > y.length){
+                    y = x[i]
+                }
+            }
+        return y
+        }
+
+    let result4 = longLenth(str5);
+    console.log('The longest length is:',result4);
+    
+    //Program to print Account Number
+
+    str6 = '12345678987';
+
+    function PrintAccountNumber(s){
+        if (s.length < 4){
+            return s
+        }
+        let startstr = s.slice(0,2);
+        let end = s.slice(-2);
+        let masked = '*'.repeat(s.length - 4);
+        return startstr+masked+end;
+    }
+
+    result6 = PrintAccountNumber(str6);
+    console.log('Program for Account Number result:',result6);
+    
+    //Program to print Credit-card number
+    let str7 = '1111222233334444';
+
+    function CreditCardNumber(s) {
+    let formattedCard = '';
+    for (let i = 0; i < s.length; i += 4) {
+        if (formattedCard !== '') {
+            formattedCard += '-';
+        }
+        formattedCard += s.slice(i, i + 4);
+    }
+
+    console.log(formattedCard); 
+    }
+
+    CreditCardNumber(str7);
+
+    //Program to check if 2 strings are anagram or not
+
+    let str8 = 'listen';
+    let str9 = 'silent';
+    
+    function anagramstr(s1,s2){
+
+        if (s1.length != s2.length){
+            return false;
+        }
+        let stra = s1.toLowerCase().split('').sort().join('');
+        let strb = s2.toLowerCase().split('').sort().join('');
+
+        if(stra === strb){
+            return true
+        }
+    }
+
+    console.log(anagramstr(str8,str9))
+
+    //Program to remove special character from a string
+
+    let str10 = 'hello@#hi&';
+
+    function removeSpecialCharacters(str) {
+        return str.replace(/[^a-zA-Z0-9]/g, ''); 
+    }
+    let result10 = removeSpecialCharacters(str10);
+    console.log(result10); 
+
+    // Move special characters to end of the string
+    let str11 = 'hello@#hi&';
+
+    function moveSpecialCharactersToEnd(str) {
+        let letters = '';
+        let specials = '';
+
+        for (let i = 0; i < str.length; i++) {
+            if (/[a-zA-Z0-9]/.test(str[i])) {
+                letters += str[i];
+            } else {
+                specials += str[i];
+            }
+        }
+
+        return letters + specials;
+    }
+
+    let result11 = moveSpecialCharactersToEnd(str11);
+    console.log(result11);
+
+
+
+</script>

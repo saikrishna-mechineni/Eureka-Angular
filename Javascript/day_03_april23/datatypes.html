@@ -1,0 +1,47 @@
+<script>
+
+    //Premitive data types
+
+    let a = 10;         // number
+    console.log(a, typeof a);
+
+    let b = 4.5;        // number
+    console.log(b, typeof b);
+
+    let c ="sai";       //string
+    console.log(c, typeof c);
+
+    let d = "1.1";      //string
+    console.log(d, typeof d)
+
+    let e = true;       //boolean
+    console.log(e,typeof e);
+
+    let f;              // undefined
+    console.log(f, typeof f);
+    
+    let g = null;       //object
+    console.log(g, typeof g);
+
+    let h = 1234n;        //bigint
+    console.log(h, typeof h)
+
+</script>
+
+<script>
+
+    //Non premitive datatypes
+    
+    let x = [10,20];    //array
+    let y = {o:10,p:20};    //object
+
+    console.log(x instanceof Object);   //true
+    console.log(y instanceof Object);   //true
+
+    console.log(x instanceof Array);    //true
+    console.log(y instanceof Array);    //false
+
+    console.log( Array.isArray(x));     //true
+    console.log(Array.isArray(y));      //false
+
+</script>

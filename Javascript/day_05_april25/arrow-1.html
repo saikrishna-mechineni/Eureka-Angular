@@ -1,0 +1,38 @@
+<script>
+
+    //arrow function should not be used in an object
+    let user ={
+        firstName: 'virat',
+        lastName: 'kohli',
+
+        fullName1: function(){ //this = user
+            console.log(this.firstName, this.lastName,this);
+
+        },
+        fullName2: ()=>{ // this = window/global
+            console.log(this.firstName, this.lastName,this);
+        }
+    }
+
+    user.fullName1();
+    user.fullName2();
+
+    class Student{
+        firstName = 'Sai';
+        lastName = 'Krishna';
+
+        fullName1(){
+            console.log(this.firstName,this.lastName, this)
+        }
+
+        fullName2 = () =>{
+            console.log(this.firstName,this.lastName, this)
+        }
+    }
+    let std = new Student();
+    std.fullName1();
+    std.fullName2();
+
+
+
+</script>

@@ -1,0 +1,33 @@
+<script>
+
+    let arr = [10,20,30,40,50];
+    const newArr = arr.map(num => num +5);
+    console.log(newArr)
+
+    let arr2 = [102,95,3,17,35,24,19,85,76,109]
+    console.log(arr2.sort()) //sorting on string values
+
+    console.log(arr2.sort((a,b)=>a-b)) // numeric sort
+    
+    console.log(arr.join('-'))
+
+    // sum of the array
+    let sum = arr.reduce((prev,curr)=>{
+        let sum = prev +curr;
+        return sum;
+    })
+    console.log('sum of the arr is:', sum)
+
+    let str1 = 'SACHIN';
+
+    let charMap = str1.split('').reduce((charObj,char)=>{
+        if(charObj[char]){
+            charObj[char] = charObj[char]+1;
+        }else{
+            charObj[char] = 1;
+        }return charObj;
+    },{})
+    console.log(charMap);
+
+
+</script>

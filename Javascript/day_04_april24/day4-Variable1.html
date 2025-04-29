@@ -1,0 +1,29 @@
+<script>
+   
+    var a = 10; 
+    let b = 20;
+    const c = 30; // const cannot be changed
+
+    console.log(`A value is ${a}`);
+    console.log(`B value is ${b}`);
+    console.log(`C value is ${c}`);
+
+    a = 40;
+    b = 50;
+    c = 60;
+
+    console.log(`A value is ${a}`);
+    console.log(`B value is ${b}`);
+    console.log(`C value is ${c}`);
+
+    const arr1 = [10,20];
+    arr1.push(30) // allowed as the address wont change
+    console.log(arr1);
+
+    //new array cant be assigned to a const array
+
+    const  obj = {a:10,b:20};
+    obj.c =30; // add a new property allowed
+    console.log(obj);
+    
+</script>

@@ -1,0 +1,27 @@
+<script>
+
+class Student{
+    constructor(roll, fname){
+        this.roll = roll;
+        this.fname = fname;
+        //this.country = 'USA';
+        //this.Add = 'wisconsin';
+    }
+}
+
+Student.prototype.country = 'USA';
+Student.prototype.Add = 'wisconsin'
+
+let std1 = new Student(101, 'rohith')
+let std2 = new Student(102, 'sravan')
+console.log(std1);
+console.log(std2);
+console.log(std1.roll, std1.fname, std1.country);
+console.log(std2.roll, std2.fname, std2.country);
+//std1.country = 'India'; //add direct property for student1 along with prototype property
+Student.prototype.country ='India';
+console.log(std1.roll, std1.fname, std1.country);
+console.log(std2.roll, std2.fname, std2.country);
+console.log(std1.__proto__.country)
+
+</script>

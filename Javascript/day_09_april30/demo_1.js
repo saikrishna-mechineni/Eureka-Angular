@@ -12,7 +12,12 @@ console.log(std1,std2);
 
 
 class Student2{
-    constructor(oll,name, add, course){
-        
+    constructor(roll,name, add, course){
+        this.roll = roll;
+        this.name = name;
+        this.add = add;
+        this.course = course;
     }
 }
+
+let std3 = new Student2(103,'rohtih','')

@@ -1,0 +1,18 @@
+<script>
+
+    let user = {name :'sai' , add:'wisconsin', dob:'1999'}
+
+    let userStr = JSON.stringify(user);
+
+
+    document.write(userStr);
+    alert(userStr);
+    sessionStorage.setItem('userStr', userStr);
+    
+    let userInfo = sessionStorage.getItem('userStr');
+    console.log(userInfo.name , userInfo.age); //string
+
+    let userObj = JSON.parder(userInfo)
+    
+
+</script>

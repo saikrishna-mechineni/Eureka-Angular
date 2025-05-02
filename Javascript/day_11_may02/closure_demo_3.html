@@ -1,0 +1,24 @@
+<script>
+
+    //closure : Data Encapsulation
+
+    let account = {accNo: 12345, accBal: 5000}// not encapsulated
+    console.log(account.accNo, account.accBal);// Read -yes
+    account.accName = -500000;
+    console.log(account.accNo,account.accBal);
+    
+    function openAccount(initalBal){
+        let accNo = 112233;
+        let accBal = initalBal;
+
+        return{
+            displayInfo: function(amtToDeposit){
+                accBal = accBal +amtToDeposit
+                console.log(`AccNo: ${accNo} and has balance of Rs: ${accBal}`);
+                
+
+            }
+        }
+    }
+
+</script>
